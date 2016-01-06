@@ -1,0 +1,9 @@
+%h1 Posts
+%table
+  %tr
+    %th Title
+    %th Content
+  - @post.each do |post|
+    %tr
+      %th= post.title
+      %th= post.content
