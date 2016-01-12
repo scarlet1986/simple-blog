@@ -1,12 +1,12 @@
-= form_for :post, url: admin_posts_path do |f|
-  - if @post.errors.any?
+= form_for [:admin, @news_item] do |f|
+  - if @news_item.errors.any?
     #error_explanation
       %h2
-        = pluralize(@post.errors.count, "error")
+        = pluralize(@news_item.errors.count, "error")
         prohibited
-        this article from being saved:
+        this news from being saved:
       %ul
-        - @post.errors.full_messages.each do |msg|
+        - @news_item.errors.full_messages.each do |msg|
           %li= msg
   %p
     = f.label :title
@@ -18,4 +18,4 @@
     = f.text_area :content, class: 'form-control'
   %p
     = f.submit
-= link_to 'Back', posts_path
+= link_to 'Back', [:admin, :news_items]

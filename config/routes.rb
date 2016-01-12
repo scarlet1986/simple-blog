@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+
   resources :posts, only: [:index, :show]
+  resources :news_items, only: [:index, :show]
 
   namespace :admin do
     resources :posts
+    resources :news_items
   end
   devise_for :admins
   # The priority is based upon order of creation: first created -> highest priority.

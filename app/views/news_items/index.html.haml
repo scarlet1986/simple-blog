@@ -1,0 +1,7 @@
+%table
+  %tr
+    - @news_items.each do |news_item|
+      %tr
+        %th= news_item.title
+        %th
+          %pre= news_item.content

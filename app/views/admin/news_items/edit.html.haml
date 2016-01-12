@@ -1,0 +1,22 @@
+%h1 Editing news
+= form_for [:admin, @news_item] do |f|
+  - if @news_item.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@news_item.errors.count, "error")
+        prohibited
+        this news from being saved:
+      %ul
+        - @news_item.errors.full_messages.each do |msg|
+          %li= msg
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title
+  %p
+    = f.label :content
+    %br/
+    = f.text_area :content
+  %p
+    = f.submit
+= link_to 'Back', news_item_path

@@ -1,0 +1,7 @@
+%p
+  = @news_item.title 
+  %br/
+  %pre
+    = @news_item.content 
+  %br/
+  = link_to 'Back', news_item_path

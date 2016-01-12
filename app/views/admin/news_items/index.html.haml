@@ -1,0 +1,13 @@
+
+%p
+=link_to 'Add news', new_admin_news_item_path, class: 'btn btn-default'
+
+%p
+- @news_items.each do |news_item|
+  %pre= news_item.title
+  %pre= news_item.content
+  %br/
+  =link_to 'Delete', [:admin, news_item], method: :delete, class: 'btn btn-default'
+  =link_to 'Edit', [:edit, :admin, news_item], class: 'btn btn-default'
+  %p
+
