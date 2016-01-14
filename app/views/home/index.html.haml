@@ -1,13 +1,13 @@
 %br
 .col-md-6
   - @posts.each do |post|
-    %pre= post.title
-    %pre= post.content
+    %h3= post.title
+    = post.content
     %br
     %br
 .col-md-5.col-md-offset-1
   - @news_items.each do |news_item|
-    %pre= news_item.title
-    %pre= news_item.content
+    %h3= news_item.title
+    = news_item.content
     %br
     %br
