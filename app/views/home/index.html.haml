@@ -8,6 +8,6 @@
 .col-md-5.col-md-offset-1
   - @news_items.each do |news_item|
     %h3= news_item.title
-    = news_item.content
+    = news_item.content.html_safe
     %br
     %br

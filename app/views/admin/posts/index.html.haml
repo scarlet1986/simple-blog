@@ -5,7 +5,7 @@
 %br/
 - @posts.each do |post|
   %h3= post.title
-  = post.content
+  = post.content.html_safe
   %br/
   %br/
   .col-md-2.col-md-offset-10

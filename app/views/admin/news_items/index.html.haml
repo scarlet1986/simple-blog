@@ -5,7 +5,7 @@
 %p
 - @news_items.each do |news_item|
   %h3= news_item.title
-  = news_item.content
+  = news_item.content.html_safe
   %br/
   =link_to 'Delete', [:admin, news_item], method: :delete, class: 'btn btn-default'
   =link_to 'Edit', [:edit, :admin, news_item], class: 'btn btn-default'
