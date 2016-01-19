@@ -2,6 +2,7 @@
   %tr
     - @news_items.each do |news_item|
       %tr
-        %th= news_item.title
+        %th= link_to news_item.title, news_item_path(news_item.id)
         %th
           = news_item.content.html_safe
+          %br

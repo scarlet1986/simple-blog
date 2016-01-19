@@ -6,7 +6,7 @@
 
 %p
 - @news_items.each do |news_item|
-  %h3= news_item.title
+  %h3= link_to news_item.title, admin_news_item_path(news_item.id)
   = news_item.content.html_safe
   %br/
   .col-md-2.col-md-offset-10

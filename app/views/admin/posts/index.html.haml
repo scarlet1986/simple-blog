@@ -4,7 +4,7 @@
 %br/
 %br/
 - @posts.each do |post|
-  %h3= post.title
+  %h3= link_to post.title, admin_post_path(post.id)
   = post.content.html_safe
   %br/
   %br/
