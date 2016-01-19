@@ -1,9 +1,5 @@
-%table
-  %tr
-    - @post.each do |post|
-      %tr
-        %th= link_to "#{post.title}", post_path(post.id)
-        %th
-          = post.content.html_safe
-          %br
-          %br
+- @post.each do |post|
+  %h3= link_to "#{post.title}", post_path(post.id)
+  = post.content.html_safe
+
+
