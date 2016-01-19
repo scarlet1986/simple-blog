@@ -1,6 +1,6 @@
 %p
   %h3= @news_item.title 
   %br
-  = @news_item.content
+  = @news_item.content.html_safe
   %br
   = link_to 'Back', news_items_path
