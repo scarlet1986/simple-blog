@@ -2,5 +2,7 @@
   %h3= link_to "#{post.title}", post_path(post.id)
   = truncate_html(post.content.html_safe, length: 1000, omission: '...' )
 %br/
-= will_paginate @posts
+%br/
+.digg_pagination
+  = will_paginate @posts
 
