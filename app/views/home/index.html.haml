@@ -2,12 +2,12 @@
 .col-md-6
   - @posts.each do |post|
     %h3= link_to post.title, post_path(post.id)
-    = post.content
+    = truncate_html(post.content, length: 300, omission: '...')
     %br
     %br
 .col-md-5.col-md-offset-1
   - @news_items.each do |news_item|
     %h3= link_to news_item.title, news_item_path(news_item.id)
-    = news_item.content.html_safe
+    = truncate_html(news_item.content.html_safe, length: 300, omission: '...')
     %br
     %br

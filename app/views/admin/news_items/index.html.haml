@@ -7,7 +7,7 @@
 %p
 - @news_items.each do |news_item|
   %h3= link_to news_item.title, admin_news_item_path(news_item.id)
-  = news_item.content.html_safe
+  = truncate_html(news_item.content.html_safe, length: 1000, omission: '...' )
   %br/
   .col-md-2.col-md-offset-10
     =link_to 'Delete', [:admin, news_item], method: :delete, class: 'btn btn-primary'

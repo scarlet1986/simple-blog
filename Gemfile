@@ -28,6 +28,7 @@ gem 'devise'
 gem 'haml'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'tinymce-rails'
+gem 'truncate_html', '~> 0.9.3'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

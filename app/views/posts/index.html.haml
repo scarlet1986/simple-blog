@@ -1,5 +1,5 @@
 - @post.each do |post|
   %h3= link_to "#{post.title}", post_path(post.id)
-  = post.content.html_safe
+  = truncate_html(post.content.html_safe, length: 1000, omission: '...' )
 
 
