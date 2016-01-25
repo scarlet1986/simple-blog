@@ -3,7 +3,7 @@
   %br/
   %h4= @post.content.html_safe 
   %br/
-  = link_to 'Back', posts_path, class: 'btn btn-primary btn-xs'
+  = link_to 'Back', admin_posts_path, class: 'btn btn-primary btn-xs'
   %br/
   .col-md-2.col-md-offset-10
     =link_to 'Delete', [:admin, @post], method: :delete, class: 'btn btn-primary'
