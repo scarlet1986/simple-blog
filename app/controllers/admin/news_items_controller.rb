@@ -16,6 +16,8 @@ class Admin::NewsItemsController < Admin::ApplicationController
   end
   def show
     @news_item = NewsItem.find(params[:id])
+    @comments = @news_item.comments
+    @comment = @news_item.comments.new
   end
   def edit
     @news_item = NewsItem.find(params[:id])

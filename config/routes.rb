@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :posts, only: [:index, :show]
   resources :news_items, only: [:index, :show]
+  resources :comments
 
   namespace :admin do
     resources :posts

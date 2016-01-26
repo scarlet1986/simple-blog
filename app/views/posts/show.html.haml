@@ -4,3 +4,4 @@
   %h4= @post.content.html_safe
   %br
   = link_to 'Back', posts_path, class: 'btn btn-primary btn-xs'
+= render 'comments/comment_form'

@@ -16,6 +16,8 @@ class Admin::PostsController < Admin::ApplicationController
   end
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments
+    @comment = @post.comments.new
   end
   def edit
     @post = Post.find(params[:id])

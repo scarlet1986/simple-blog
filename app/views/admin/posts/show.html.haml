@@ -9,3 +9,4 @@
     =link_to 'Delete', [:admin, @post], method: :delete, class: 'btn btn-primary'
     =link_to 'Edit', [:edit, :admin, @post], class: 'btn btn-primary'
   %p
+= render 'comments/comment_form'

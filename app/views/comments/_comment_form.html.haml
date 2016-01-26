@@ -1,0 +1,16 @@
+- @comments.each do |c|
+  = c.author
+  = c.content
+
+
+= form_for @comment do |f|
+  = f.hidden_field :commentable_id
+  = f.hidden_field :commentable_type
+  = f.label :name
+  = f.text_area :author, class: "form-control", rows: "1"
+  %br
+  = f.text_area :content, class: "form-control", rows: "3"
+  %br
+  %br
+  .col-md-2.col-md-offset-10
+    = f.submit 'Add comment', class: 'btn btn-success'

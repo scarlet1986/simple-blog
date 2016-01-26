@@ -5,5 +5,7 @@ class NewsItemsController < ApplicationController
 
   def show
     @news_item = NewsItem.find(params[:id])
+    @comments = @news_item.comments
+    @comment = @news_item.comments.new
   end
 end
