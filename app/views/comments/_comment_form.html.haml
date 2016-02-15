@@ -1,6 +1,9 @@
-- @comments.each do |c|
-  = c.author
-  = c.content
+#comments
+  - @comments.each do |c|
+    %strong= c.author
+    = c.content
+    %br
+    %br
 
 
 = form_for @comment do |f|
@@ -13,4 +16,4 @@
   %br
   %br
   .col-md-2.col-md-offset-10
-    = f.submit 'Add comment', class: 'btn btn-success'
+    = f.submit 'Add comment', class: 'btn btn-success', id: 'add_comment'
