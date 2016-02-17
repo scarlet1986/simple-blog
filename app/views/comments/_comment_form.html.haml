@@ -6,7 +6,7 @@
     %br
 
 
-= form_for @comment do |f|
+= form_for @comment, remote: true do |f|
   = f.hidden_field :commentable_id
   = f.hidden_field :commentable_type
   = f.label :name
